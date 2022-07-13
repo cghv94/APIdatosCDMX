@@ -8,6 +8,15 @@
 #' @examples
 #' # id <- 3
 #' # descargar_datos(id = id)
+#' # Puede realizar descargas masivas creando un vector con
+#' # los ids de las series que desea descargar y un ciclo for:
+#' # Ejemplo 1
+#' # ids <- 105:110
+#' # for(i in ids) {descargar_datos(i)}
+#' # Ejemplo 2
+#' # series <- c(2, 94, 170, 241)
+#' # for(i in series) {descargar_datos(i)}
+
 
 descargar_datos <- function(id) {
   catalogo1 <- utils::read.csv("https://datos.cdmx.gob.mx/dataset/ec3ca76e-3c82-4e0e-9793-5ba6645c7b7f/resource/32264f77-85e0-4d61-a889-ce7deb631134/download/catalogo-recursos.csv")
@@ -42,7 +51,7 @@ descargar_datos <- function(id) {
     diccionario <- liga_diccionario %>% rvest::html_element(".resource-url-analytics") %>% rvest::html_attr("href")
     diccionario <- data.table::fread(diccionario, encoding = "Latin-1") # El encoding puede ser Latin-1 o UTF-8
     write.csv(diccionario, paste0("diccionario-de-datos-", disponibles1$nombre[id], ".csv"))
-    paste0("El diccionario de datos de ", disponibles1$nombre[id], " se descargo con exito")} else {paste0("No hay diccionario de datos para ", disponibles1$nombre[id])}
+    print(paste0("El diccionario de datos de ", disponibles1$nombre[id], " se descargo con exito"))} else {print(paste0("No hay diccionario de datos para ", disponibles1$nombre[id]))}
 
 }
 

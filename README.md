@@ -49,10 +49,17 @@ metadatos <- obtener_metadatos(id = id)
 metadatos
 ```
 
-Para descargar la base de datos, el diccionario de datos y los metadatos en formato `.csv`, utilice la función `descargar_datos` y escriba el ID de la serie que desea descargar dentro del paréntesis:
+Para descargar la base de datos, el diccionario de datos y los metadatos en formato `.csv`, utilice la función `descargar_datos` y escriba el ID de la serie que desea descargar dentro del paréntesis (no todas las bases de datos tienen diccionario de datos):
 
 ``` r
 descargar_datos(id = id)
+```
+
+Usted puede realizar descargas masivas creando un vector con los ids de las series que desea descargar y un ciclo `for`:
+
+``` r
+ids <- 105:110
+for(i in ids) {descargar_datos(i)}
 ```
 
 También puede ver el ejemplo disponible en RStudio Cloud: <https://rstudio.cloud/project/4256994>

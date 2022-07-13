@@ -15,4 +15,12 @@ Elija un ID de las series disponibles y descargue la base de datos, el diccionar
 \examples{
 # id <- 3
 # descargar_datos(id = id)
+# Puede realizar descargas masivas creando un vector con
+# los ids de las series que desea descargar y un ciclo for:
+# Ejemplo 1
+# ids <- 105:110
+# for(i in ids) {descargar_datos(i)}
+# Ejemplo 2
+# series <- c(2, 94, 170, 241)
+# for(i in series) {descargar_datos(i)}
 }
