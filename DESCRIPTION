@@ -4,7 +4,7 @@ Title: Connect to Mexico City Open Data API
 Version: 0.1.0
 Author: Cesar Gerardo Hernández Vargas <https://cghv94.github.io/>
 Maintainer: Cesar Gerardo Hernández Vargas <cghv94@outlook.es>
-Description: Unofficial API of the open data portal of Mexico City. Download more than 200 data series as well as their dictionaries and metadata.
+Description: Unofficial API of the open data portal of Mexico City. Download more than 240 data series as well as their dictionaries and metadata.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

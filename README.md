@@ -55,7 +55,7 @@ Para descargar la base de datos, el diccionario de datos y los metadatos en form
 descargar_datos(id = id)
 ```
 
-Usted puede realizar descargas masivas creando un vector con los ids de las series que desea descargar y un ciclo `for`:
+Usted puede realizar descargas masivas creando un vector con los ID de las series que desea descargar y un ciclo `for`:
 
 ``` r
 ids <- 105:110
